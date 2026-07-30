@@ -1,0 +1,30 @@
+{
+  "name": "dadaji-studio-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "axios": "^1.6.8",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^0.363.0",
+    "postcss": "^8.4.38",
+    "react": "^18.2.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "tailwindcss": "^3.4.3",
+    "video.js": "^8.12.0",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.0"
+  }
+}

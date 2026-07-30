@@ -1,0 +1,29 @@
+# VYOM Studio — PostgreSQL (persistent, not SQLite)
+#
+# Start:  docker compose up -d
+# Stop:   docker compose down        (data kept in volume vyom_pg_data)
+# Logs:   docker compose logs -f postgres
+# Backup: see backup.ps1
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: vyom-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: vyom
+      POSTGRES_PASSWORD: vyom
+      POSTGRES_DB: vyom_studio
+    ports:
+      - "5432:5432"
+    volumes:
+      - vyom_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vyom -d vyom_studio"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  vyom_pg_data:
+    name: vyom_pg_data

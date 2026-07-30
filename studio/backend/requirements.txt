@@ -1,0 +1,24 @@
+fastapi==0.109.0
+uvicorn==0.27.0
+python-dotenv==1.0.0
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+alembic==1.13.1
+google-generativeai==0.5.0
+# NOTE: 0.5.0 no longer ships the `imagen` submodule. gemini_service.generate_image
+# is migrated to the new `google-genai` SDK (kept here only for the legacy
+# analyze_image path; safe to remove once that path moves over).
+google-genai==2.8.0
+anthropic>=0.30
+# google-genai 2.x requires httpx>=0.28.1; anthropic 0.30+ supports it.
+httpx>=0.28.1,<1.0
+python-multipart==0.0.6
+pydantic==2.6.0
+pillow==10.2.0
+ffmpeg-python==0.2.0
+pyngrok==7.0.0
+requests==2.31.0
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+email-validator==2.1.0
+dnspython==2.6.1
