@@ -7,6 +7,11 @@ docs/
 .claude/
 keys.txt
 
+studio/backend/services/veo_service.py
+studio/backend/services/tts_service.py
+studio/backend/routers/generate.py
+studio/veo_logic.js
+
 # --- Database internal docs ---
 studio/database/README.md
 
