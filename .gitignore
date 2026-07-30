@@ -1,0 +1,67 @@
+# =====================================================================
+# Vyom Studio — .gitignore
+# =====================================================================
+
+# --- Private / sensitive docs ---
+docs/
+.claude/
+keys.txt
+
+# --- Database internal docs ---
+studio/database/README.md
+
+# --- Studio internal docs ---
+studio/docs/
+
+# --- Server logs ---
+studio/backend/server.log
+*.log
+
+# --- Python virtual environment ---
+studio/backend/.venv/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# --- Database files ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Environment / secrets ---
+.env
+*.env
+!.env.example
+
+# --- Node / frontend ---
+node_modules/
+.next/
+dist/
+build/
+.vite/
+
+# --- Generated storage (large binary assets) ---
+studio/storage/projects/
+studio/storage/assets/characters/
+studio/storage/assets/backgrounds/
+studio/storage/assets/props/
+studio/storage/generated/
+
+# --- Test & dev scripts ---
+studio/test_api.py
+
+# --- OS & editor files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
